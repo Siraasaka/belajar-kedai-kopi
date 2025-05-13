@@ -1,20 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kedai Kopi</title>
+    <title>Kedai Kopi - Nikmati Kopi Terbaik di Kota</title>
+    <meta
+      name="description"
+      content="Kedai Kopi menyajikan kopi berkualitas dengan biji pilihan untuk pengalaman minum kopi terbaik Anda"
+    />
 
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,700&display=swap"
       rel="stylesheet"
     />
 
     <!-- Feather Icon -->
     <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Font Awesome Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <!-- MY Style -->
     <link rel="stylesheet" href="css/style.css" />
@@ -23,111 +36,497 @@
   <body>
     <!-- Navbar Start -->
     <nav class="navbar">
-      <a href="'#" class="navbar-logo">kedai<span>kopi</span>.</a>
+      <a href="#" class="navbar-logo">kedai<span>kopi</span>.</a>
 
       <div class="navbar-nav">
-        <a href="#home">Home</a>
+        <a href="#home" class="active">Beranda</a>
         <a href="#about">Tentang Kami</a>
         <a href="#menu">Menu</a>
+        <a href="#products">Produk</a>
+        <a href="#testimonial">Galeri</a>
+        <a href="#blog">Blog</a>
         <a href="#contact">Kontak</a>
       </div>
 
       <div class="navbar-extra">
-        <a href="#" id="search"><i data-feather="search"></i></a>
+        <a href="#" id="search-button"><i data-feather="search"></i></a>
         <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
         <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+
+      <!-- Search Form -->
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="cari disini..." />
+        <label for="search-box"><i data-feather="search"></i></label>
+      </div>
+
+      <!-- Shopping Cart -->
+      <div class="shopping-cart">
+        <div class="cart-item">
+          <img src="img/products/kopi-robus-hitam.png" alt="Kopi Aceh Gayo" />
+          <div class="item-detail">
+            <h3>Kopi Aceh Gayo</h3>
+            <div class="item-price">IDR 120K</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+        <div class="cart-item">
+          <img src="img/products/kopi-arabica.png" alt="Bubuk Kopi Premium" />
+          <div class="item-detail">
+            <h3>Bubuk Kopi Premium</h3>
+            <div class="item-price">IDR 95K</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+        <a href="#" class="checkout-btn">Checkout</a>
       </div>
     </nav>
     <!-- Navbar End -->
 
     <!-- Hero Section start -->
     <section class="hero" id="home">
-      <main class="content">
+      <main class="content" data-aos="fade-right" data-aos-duration="1000">
         <h1>Mari Nikmati Secangkir <span>Kopi</span></h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, eum.</p>
-        <a href="#" class="cta">Beli Sekarang</a>
+        <p>Setiap tegukan adalah perjalanan rasa yang tak terlupakan.</p>
+        <a href="#menu" class="cta">Lihat Menu</a>
       </main>
     </section>
     <!-- Hero Section end -->
 
     <!-- About Section start -->
     <section id="about" class="about">
-      <h2><span>Tentang</span> Kami</h2>
-      
+      <h2 data-aos="fade-down" data-aos-duration="1000">
+        <span>Tentang</span> Kami
+      </h2>
+
       <div class="row">
-        <div class="about-img">
-          <img src="img/tentang-kami.jpg" 
-          alt="Tentang Kami">
+        <div
+          class="about-img"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          data-aos-delay="200"
+        >
+          <img src="img/tentang-kami.jpg" alt="Tentang Kami" />
         </div>
-        <div class="content">
-          <h3>Kenapa memilih kami?</h3>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate, modi. Facere officiis ea ipsa velit!</p>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora quasi assumenda ut accusantium nobis voluptas aperiam distinctio totam in alias.</p>
+        <div
+          class="content"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          data-aos-delay="200"
+        >
+          <h3>Kenapa memilih kedai kopi kami?</h3>
+          <p>
+            Kami memilih biji kopi terbaik dari petani lokal yang diproses
+            dengan teliti untuk menghasilkan cita rasa yang sempurna dalam
+            setiap seduhan.
+          </p>
+          <p>
+            Kedai kopi kami memberikan pengalaman menikmati kopi yang autentik
+            dengan suasana nyaman dan pelayanan yang ramah, membuat Anda ingin
+            kembali lagi.
+          </p>
+          <a href="#about" class="cta-secondary">Baca Selengkapnya</a>
         </div>
       </div>
     </section>
     <!-- About Section end -->
-    
-    
+
     <!-- Menu Section start -->
     <section id="menu" class="menu">
-      <h2><span>Menu</span> Kami</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, dolorum alias dolor ullam saepe error.</p>
+      <h2 data-aos="fade-down" data-aos-duration="1000">
+        <span>Menu</span> Favorit
+      </h2>
+      <p data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
+        Kopi pilihan dengan biji terbaik yang diolah oleh barista berpengalaman
+        untuk kepuasan Anda.
+      </p>
 
       <div class="row">
-        <div class="menu-card">
-          <img src="img/menu/1.jpg.png" alt="Espresso">
+        <div
+          class="menu-card"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="200"
+        >
+          <div class="menu-card-img">
+            <img src="img/menu/espresso.jpg" alt="Espresso" />
+          </div>
           <h3 class="menu-card-title">- Espresso -</h3>
           <p class="menu-card-price">IDR 15K</p>
+          <a href="#" class="menu-card-order">Pesan Sekarang</a>
         </div>
-        <div class="menu-card">
-          <img src="img/menu/1.jpg.png" alt="Espresso">
-          <h3 class="menu-card-title">- Espresso -</h3>
-          <p class="menu-card-price">IDR 15K</p>
+        <div
+          class="menu-card"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="400"
+        >
+          <div class="menu-card-img">
+            <img src="img/menu/cappuccino.jpg" alt="Cappuccino" />
+          </div>
+          <h3 class="menu-card-title">- Cappuccino -</h3>
+          <p class="menu-card-price">IDR 25K</p>
+          <a href="#" class="menu-card-order">Pesan Sekarang</a>
         </div>
-        <div class="menu-card">
-          <img src="img/menu/1.jpg.png" alt="Espresso">
-          <h3 class="menu-card-title">- Espresso -</h3>
-          <p class="menu-card-price">IDR 15K</p>
+        <div
+          class="menu-card"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="600"
+        >
+          <div class="menu-card-img">
+            <img src="img/menu/latte.jpg" alt="Caffe Latte" />
+          </div>
+          <h3 class="menu-card-title">- Caffe Latte -</h3>
+          <p class="menu-card-price">IDR 23K</p>
+          <a href="#" class="menu-card-order">Pesan Sekarang</a>
         </div>
-        <div class="menu-card">
-          <img src="img/menu/1.jpg.png" alt="Espresso">
-          <h3 class="menu-card-title">- Espresso -</h3>
-          <p class="menu-card-price">IDR 15K</p>
-        </div>
-        <div class="menu-card">
-          <img src="img/menu/1.jpg.png" alt="Espresso">
-          <h3 class="menu-card-title">- Espresso -</h3>
-          <p class="menu-card-price">IDR 15K</p>
-        </div><div class="menu-card">
-          <img src="img/menu/1.jpg.png" alt="Espresso">
-          <h3 class="menu-card-title">- Espresso -</h3>
-          <p class="menu-card-price">IDR 15K</p>
-        </div>
+      </div>
+
+      <div
+        class="menu-cta"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+        data-aos-delay="800"
+      >
+        <a href="#menu" class="cta">Lihat Semua Menu</a>
       </div>
     </section>
     <!-- Menu Section end -->
 
-    <!-- Contact Section Start -->
-    <section id="contact" class="contact">
-      <h2><span>Kontak</span> Kami</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, nihil?</p>
+    <!-- Products Section start -->
+    <section id="products" class="products">
+      <h2 data-aos="fade-down" data-aos-duration="1000">
+        <span>Produk</span> Kami
+      </h2>
+      <p data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
+        Koleksi biji kopi dan produk coffee-related untuk dibawa pulang dan
+        dinikmati di rumah.
+      </p>
 
       <div class="row">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15883.740221021064!2d95.344809!3d5.57662!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30403703c72fdda9%3A0xddc4f9a2441e86b1!2sJeulingke%2C%20Kec.%20Syiah%20Kuala%2C%20Kota%20Banda%20Aceh%2C%20Aceh!5e0!3m2!1sid!2sid!4v1706018940645!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
-      
-        <form action="">
+        <div
+          class="product-card"
+          data-aos="flip-left"
+          data-aos-duration="1000"
+          data-aos-delay="200"
+        >
+          <div class="product-icons">
+            <a href="#"><i data-feather="shopping-cart"></i></a>
+            <a href="#" class="item-detail-button"
+              ><i data-feather="eye"></i
+            ></a>
+          </div>
+          <div class="product-image">
+            <img src="img/products/kopi-robus-hitam.png" alt="Robusta" />
+          </div>
+          <div class="product-content">
+            <h3>Kopi Robusta Gayo</h3>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+            </div>
+            <div class="product-price">IDR 120K <span>150K</span></div>
+          </div>
+        </div>
+        <div
+          class="product-card"
+          data-aos="flip-left"
+          data-aos-duration="1000"
+          data-aos-delay="400"
+        >
+          <div class="product-icons">
+            <a href="#"><i data-feather="shopping-cart"></i></a>
+            <a href="#" class="item-detail-button"
+              ><i data-feather="eye"></i
+            ></a>
+          </div>
+          <div class="product-image">
+            <img src="img/products/kopi-arabica.png" alt="Arabica" />
+          </div>
+          <div class="product-content">
+            <h3>Kopi Arabica Gayo</h3>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star"></i>
+            </div>
+            <div class="product-price">IDR 95K <span>110K</span></div>
+          </div>
+        </div>
+        <div
+          class="product-card"
+          data-aos="flip-left"
+          data-aos-duration="1000"
+          data-aos-delay="600"
+        >
+          <div class="product-icons">
+            <a href="#"><i data-feather="shopping-cart"></i></a>
+            <a href="#" class="item-detail-button"
+              ><i data-feather="eye"></i
+            ></a>
+          </div>
+          <div class="product-image">
+            <img src="img/products/kopi-robus-hitam.png" alt="Robus Hitam" />
+          </div>
+          <div class="product-content">
+            <h3>Kopi Robusta full washed</h3>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-half"></i>
+            </div>
+            <div class="product-price">IDR 60K</div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="product-cta"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+        data-aos-delay="800"
+      >
+        <a href="#products" class="cta">Lihat Semua Produk</a>
+      </div>
+    </section>
+    <!-- Products Section end -->
+
+    <!-- Testimonial Section start -->
+    <section id="testimonial" class="testimonial">
+      <h2 data-aos="fade-down" data-aos-duration="1000">
+        <span>Testimoni</span> Pelanggan
+      </h2>
+      <p data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
+        Apa yang pelanggan kami katakan tentang pengalaman mereka.
+      </p>
+
+      <div class="row">
+        <div
+          class="testimonial-card"
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          data-aos-delay="200"
+        >
+          <div class="testimonial-profile">
+            <img src="img/testimonial/profile-1.png" alt="Customer 1" />
+            <div class="profile-info">
+              <h3>Rizki Ananda</h3>
+              <p>Coffee Lover</p>
+            </div>
+          </div>
+          <div class="testimonial-stars">
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+          </div>
+          <p class="testimonial-text">
+            "Kopi terbaik yang pernah saya coba. Suasana kedai yang cozy dan
+            barista yang sangat ramah dan berpengetahuan luas tentang kopi."
+          </p>
+        </div>
+        <div
+          class="testimonial-card"
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          data-aos-delay="400"
+        >
+          <div class="testimonial-profile">
+            <img src="img/testimonial/profile-2.png" alt="Customer 2" />
+            <div class="profile-info">
+              <h3>Dian Sastro</h3>
+              <p>Content Creator</p>
+            </div>
+          </div>
+          <div class="testimonial-stars">
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-half"></i>
+          </div>
+          <p class="testimonial-text">
+            "Tempat yang sempurna untuk bekerja dengan coffee art yang cantik.
+            WiFi cepat dan makanan ringan pelengkapnya enak-enak!"
+          </p>
+        </div>
+        <div
+          class="testimonial-card"
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          data-aos-delay="600"
+        >
+          <div class="testimonial-profile">
+            <img src="img/testimonial/profile-3.png" alt="Customer 3" />
+            <div class="profile-info">
+              <h3>Randi Irawan</h3>
+              <p>Mahasiswa</p>
+            </div>
+          </div>
+          <div class="testimonial-stars">
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star"></i>
+          </div>
+          <p class="testimonial-text">
+            "Tempat nongkrong favorit dengan teman-teman. Suasana nyaman, kopi
+            enak, dan harga masih bersahabat untuk mahasiswa."
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonial Section end -->
+
+    <!-- Blog Section start -->
+    <section id="blog" class="blog">
+      <h2 data-aos="fade-down" data-aos-duration="1000">
+        <span>Blog</span> Kami
+      </h2>
+      <p data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
+        Kumpulan artikel menarik tentang dunia kopi dan cerita di balik
+        secangkir kopi.
+      </p>
+
+      <div class="row">
+        <div
+          class="blog-card"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="200"
+        >
+          <div class="blog-img">
+            <img src="img/blog/coffee-beans.jpg" alt="Coffee Beans" />
+          </div>
+          <div class="blog-content">
+            <div class="blog-info">
+              <span><i data-feather="calendar"></i> 15 Januari 2024</span>
+              <span><i data-feather="user"></i> Admin</span>
+            </div>
+            <h3>Mengenal Berbagai Asal Kopi di Indonesia</h3>
+            <p>
+              Indonesia adalah surga bagi pecinta kopi dengan beragam jenis kopi
+              yang memiliki karakteristik unik dari berbagai daerah...
+            </p>
+            <a href="blog-detail.html" class="read-more"
+              >Baca Selengkapnya <i data-feather="arrow-right"></i
+            ></a>
+          </div>
+        </div>
+        <div
+          class="blog-card"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="400"
+        >
+          <div class="blog-img">
+            <img src="img/blog/brewing.png" alt="Brewing Methods" />
+          </div>
+          <div class="blog-content">
+            <div class="blog-info">
+              <span><i data-feather="calendar"></i> 20 Februari 2024</span>
+              <span><i data-feather="user"></i> Admin</span>
+            </div>
+            <h3>5 Metode Brewing Kopi yang Wajib Dicoba</h3>
+            <p>
+              Metode brewing sangat mempengaruhi rasa dan aroma kopi yang
+              dihasilkan. Berikut 5 teknik brewing populer yang bisa Anda
+              coba...
+            </p>
+            <a href="blog-detail.html" class="read-more"
+              >Baca Selengkapnya <i data-feather="arrow-right"></i
+            ></a>
+          </div>
+        </div>
+        <div
+          class="blog-card"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="600"
+        >
+          <div class="blog-img">
+            <img src="img/blog/manfaat.png" alt="Coffee Health" />
+          </div>
+          <div class="blog-content">
+            <div class="blog-info">
+              <span><i data-feather="calendar"></i> 5 Maret 2024</span>
+              <span><i data-feather="user"></i> Admin</span>
+            </div>
+            <h3>Manfaat Kopi untuk Kesehatan</h3>
+            <p>
+              Tahukah Anda bahwa kopi memiliki berbagai manfaat untuk kesehatan
+              bila dikonsumsi secara tepat? Mari kita bahas fakta ilmiahnya...
+            </p>
+            <a href="blog-detail.html" class="read-more"
+              >Baca Selengkapnya <i data-feather="arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="blog-cta"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+        data-aos-delay="800"
+      >
+        <a href="#blog" class="cta">Baca Artikel Lainnya</a>
+      </div>
+    </section>
+    <!-- Blog Section end -->
+
+    <!-- Contact Section Start -->
+    <section id="contact" class="contact">
+      <h2 data-aos="fade-down" data-aos-duration="1000">
+        <span>Kontak</span> Kami
+      </h2>
+      <p data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
+        Jangan ragu untuk menghubungi kami jika ada pertanyaan atau reservasi.
+      </p>
+
+      <div class="row">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15883.740221021064!2d95.344809!3d5.57662!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30403703c72fdda9%3A0xddc4f9a2441e86b1!2sJeulingke%2C%20Kec.%20Syiah%20Kuala%2C%20Kota%20Banda%20Aceh%2C%20Aceh!5e0!3m2!1sid!2sid!4v1706018940645!5m2!1sid!2sid"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="map"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          data-aos-delay="200"
+        ></iframe>
+
+        <form
+          action=""
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          data-aos-delay="200"
+        >
           <div class="input-group">
             <i data-feather="user"></i>
-            <input type="text" placeholder="nama">
+            <input type="text" placeholder="nama" />
           </div>
           <div class="input-group">
             <i data-feather="mail"></i>
-            <input type="text" placeholder="email">
+            <input type="text" placeholder="email" />
           </div>
           <div class="input-group">
             <i data-feather="phone"></i>
-            <input type="text" placeholder="no hp">
+            <input type="text" placeholder="no hp" />
+          </div>
+          <div class="input-group">
+            <i data-feather="message-square"></i>
+            <textarea placeholder="pesan" rows="5"></textarea>
           </div>
           <button type="submit" class="btn">Kirim Pesan</button>
         </form>
@@ -135,31 +534,119 @@
     </section>
     <!-- Contact Section End -->
 
+    <!-- Newsletter Section Start -->
+    <section class="newsletter" data-aos="fade-up" data-aos-duration="1000">
+      <div class="newsletter-content">
+        <h2>Berlangganan <span>Newsletter</span></h2>
+        <p>Dapatkan informasi terbaru dan promo spesial dari kami.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Masukkan email Anda" />
+          <button type="submit">Berlangganan</button>
+        </div>
+      </div>
+    </section>
+    <!-- Newsletter Section End -->
 
     <!-- Footer Start -->
     <footer>
-      <div class="socials">
-        <a href="#"><i data-feather="instagram"></i></a>
-        <a href="#"><i data-feather="twitter"></i></a>
-        <a href="#"><i data-feather="facebook"></i></a>
-      </div>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <a href="#" class="logo">kedai<span>kopi</span>.</a>
+          <p>
+            Tempatnya para pecinta kopi berkualitas dengan suasana yang nyaman
+            dan hangat.
+          </p>
+          <div class="footer-socials">
+            <a href="#"><i data-feather="instagram"></i></a>
+            <a href="#"
+              ><i class="fa-brands fa-tiktok" style="font-size: 1.5rem"></i
+            ></a>
+            <a href="#"><i data-feather="facebook"></i></a>
+            <a href="#"><i data-feather="youtube"></i></a>
+          </div>
+        </div>
 
-      <div class="links">
-        <a href="#home">Home</a>
-        <a href="#about">Tentang Kami</a>
-        <a href="#menu">Menu</a>
-        <a href="#contact">Kontak</a>
+        <div class="footer-links">
+          <h3>Link Cepat</h3>
+          <ul>
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#about">Tentang Kami</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#products">Produk</a></li>
+            <li><a href="#testimonial">Galeri</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Kontak</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h3>Kontak Kami</h3>
+          <p>
+            <i data-feather="map-pin"></i> Jl. Teuku Nyak Arief No. 123,
+            Jeulingke, Banda Aceh
+          </p>
+          <p><i data-feather="phone"></i> +62 821-1234-5678</p>
+          <p><i data-feather="mail"></i> info@kedaikopi.com</p>
+          <p><i data-feather="clock"></i> Buka Setiap Hari: 08.00 - 22.00</p>
+        </div>
       </div>
 
       <div class="credit">
-        <p>created by <a href="">Mine</a>. | &copy; 2024.</p>
+        <p>
+          Created by <a href="">Mine</a>. | &copy; 2024 Kedai Kopi. All Rights
+          Reserved.
+        </p>
       </div>
     </footer>
     <!-- Footer End -->
 
+    <!-- Modal Box Item Detail Start -->
+    <div class="modal" id="item-detail-modal">
+      <div class="modal-container">
+        <a href="#" class="close-icon"><i data-feather="x"></i></a>
+        <div class="modal-content">
+          <img src="img/products/kopi-arabica.png" alt="Product Detail" />
+          <div class="product-detail">
+            <h3>Kopi Aceh Gayo</h3>
+            <p>
+              Biji kopi Arabika dari dataran tinggi Gayo dengan aroma khas dan
+              cita rasa premium. Diproses secara natural untuk menghasilkan
+              karakter buah dan keasaman rendah.
+            </p>
+            <div class="product-stars">
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <i data-feather="star" class="star-full"></i>
+              <span>(25 reviews)</span>
+            </div>
+            <div class="product-price">IDR 120K <span>150K</span></div>
+            <div class="product-quantity">
+              <button id="decrease">-</button>
+              <input type="number" id="quantity" value="1" min="1" />
+              <button id="increase">+</button>
+            </div>
+            <a href="#" class="add-to-cart"
+              ><i data-feather="shopping-cart"></i> <span>Add to Cart</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Box Item Detail End -->
+
     <!-- Feather Icons -->
     <script>
       feather.replace();
+    </script>
+
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+      });
     </script>
 
     <!-- My Javascript -->
